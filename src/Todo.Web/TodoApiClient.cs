@@ -9,6 +9,7 @@ public sealed class TodoApiClient(HttpClient http)
     public async Task<IReadOnlyList<TodoResponse>> ListAsync(CancellationToken cancellationToken) =>
         await http.GetFromJsonAsync<TodoResponse[]>("todos", cancellationToken) ?? [];
 
+    // Devolve null quando a API recusa o título. Isso é resposta esperada, não é exceção.
     public async Task<TodoResponse?> AddAsync(string title, CancellationToken cancellationToken)
     {
         var response = await http.PostAsJsonAsync("todos", new CreateTodoRequest(title), cancellationToken);

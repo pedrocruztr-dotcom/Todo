@@ -3,6 +3,7 @@ using Xunit;
 
 namespace Todo.Infrastructure.Tests;
 
+// Base de dados a sério, não um duplo. O SQL é a lógica aqui, e um mock não a testava.
 public sealed class SqlServerFixture : IAsyncLifetime
 {
     private const string ConnectionString =

@@ -7,6 +7,7 @@ public static class InfrastructureRegistration
 {
     public static IServiceCollection AddTodoInfrastructure(this IServiceCollection services, string connectionString)
     {
+        // Uma vez ao arrancar. O registo do Dapper é global ao processo.
         DapperTypeHandlers.Register();
 
         services.AddSingleton(TimeProvider.System);

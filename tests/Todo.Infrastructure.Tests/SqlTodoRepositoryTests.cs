@@ -90,6 +90,7 @@ public sealed class SqlTodoRepositoryTests(SqlServerFixture fixture) : IClassFix
     }
 
     [Fact]
+    // Prova que o UPDATE único aguenta dois a carregar ao mesmo tempo. Fica igual ao início.
     public async Task ToggleAsync_WhenTwoCallersRace_AppliesEachExactlyOnce()
     {
         var item = Pending("buy milk");

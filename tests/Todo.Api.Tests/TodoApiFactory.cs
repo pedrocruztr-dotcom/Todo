@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace Todo.Api.Tests;
 
+// Levanta a API a sério em memória, com base de dados própria para não mexer na de trabalho.
 public sealed class TodoApiFactory : WebApplicationFactory<Program>
 {
     private const string ConnectionString =

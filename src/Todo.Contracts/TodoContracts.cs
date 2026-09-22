@@ -1,5 +1,6 @@
 namespace Todo.Contracts;
 
+// Formas que atravessam HTTP. Separadas do domínio porque têm de serializar para JSON.
 public sealed record CreateTodoRequest(string Title);
 
 public sealed record TodoResponse(

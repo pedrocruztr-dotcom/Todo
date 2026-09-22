@@ -18,7 +18,8 @@ public sealed partial class UnhandledExceptionHandler(
             return false;
         }
 
-        // Em .NET 10 o middleware deixa de registar quando devolvemos true, por isso registamos aqui.
+        // Em .NET 10 o middleware deixa de registar quando devolvemos true, por isso registamos aqui ig deve haver melhor maneira de fazer isto com tempo~
+        // gostava de poder passar em contexto o logger ou algo assim para não ter de registar manualmente aqui como se fosse uma request time depenndecy 
         LogUnhandled(logger, httpContext.Request.Method, httpContext.Request.Path, exception);
 
         httpContext.Response.StatusCode = StatusCodes.Status500InternalServerError;

@@ -1,6 +1,5 @@
 @page "/"
 @* Sem prerender: com ele o OnInitializedAsync corria duas vezes e batia na API a dobrar. *@
-@* Sem prerender. Com ele o OnInitializedAsync corria duas vezes e batia na API a dobrar. *@
 @rendermode @(new InteractiveServerRenderMode(prerender: false))
 @using Todo.Contracts
 @using Todo.Web

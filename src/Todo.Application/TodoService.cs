@@ -2,6 +2,7 @@ using Todo.Domain;
 
 namespace Todo.Application;
 
+// Decide o quando. O relógio entra por aqui para os testes poderem fixar a hora.
 public sealed class TodoService(ITodoRepository repository, TimeProvider clock)
 {
     public Task<IReadOnlyList<TodoItem>> ListAsync(CancellationToken cancellationToken) =>
