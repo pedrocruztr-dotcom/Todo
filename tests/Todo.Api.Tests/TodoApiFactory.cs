@@ -17,7 +17,7 @@ public sealed class TodoApiFactory : WebApplicationFactory<Program>
         builder.ConfigureAppConfiguration(configuration =>
             configuration.AddInMemoryCollection(new Dictionary<string, string?>
             {
-                ["ConnectionStrings:Todo"] = ConnectionString
+                ["ConnectionStrings:carrodopingodoce"] = ConnectionString
             }));
     }
 }

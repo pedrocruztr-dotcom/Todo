@@ -3,7 +3,7 @@ using Todo.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
-const string ConnectionName = "Todo";
+const string ConnectionName = "carrodopingodoce";
 
 var connectionString = builder.Configuration.GetConnectionString(ConnectionName)
     ?? throw new InvalidOperationException($"Connection string '{ConnectionName}' is not configured.");
